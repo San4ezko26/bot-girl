@@ -8,7 +8,7 @@ vxodworker='/воркер' #Слово для входа в воркер пан�
 zalety = -1001305864424
 bot_username = "BestEscortBot"
 qiwi_nick = "ESCORT26"
-chat_workers = "-1001791781996"
+chat_workers = "https://t.me/+iXSpPZmAap80OTQ1"
 text_workers = "https://telegra.ph/Manual-po-Luxury-Secret-12-19"
 
 
