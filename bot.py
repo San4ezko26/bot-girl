@@ -176,7 +176,10 @@ def main_message(message):
 				con = sqlite3.connect("data.db")
 				cur = con.cursor()
 				cur.execute(f"select photoid from users where id = {message.chat.id}")
-				imgid = cur.fetchone()[0]
+				if cur.fetchone() is not None:
+					imgid = cur.fetchone()[0]
+				else:
+					imgid = 0
 				con.commit()
 
 				con = sqlite3.connect("data.db")
