@@ -1,2 +1,1 @@
-worker: python casino.py
-worker: python ticket.py
+worker: python bot.py
