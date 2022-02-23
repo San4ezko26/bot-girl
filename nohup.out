@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "bot.py", line 1780, in <module>
+    bot.polling(none_stop=True)
+  File "/usr/local/lib/python3.8/dist-packages/telebot/__init__.py", line 514, in polling
+    self.__threaded_polling(none_stop, interval, timeout, long_polling_timeout)
+  File "/usr/local/lib/python3.8/dist-packages/telebot/__init__.py", line 573, in __threaded_polling
+    raise e
+  File "/usr/local/lib/python3.8/dist-packages/telebot/__init__.py", line 536, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/usr/local/lib/python3.8/dist-packages/telebot/util.py", line 117, in raise_exceptions
+    raise self.exception_info
+  File "/usr/local/lib/python3.8/dist-packages/telebot/util.py", line 69, in run
+    task(*args, **kwargs)
+  File "bot.py", line 171, in main_message
+    imgid = cur.fetchone()[0]
+TypeError: 'NoneType' object is not subscriptable
