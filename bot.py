@@ -1153,7 +1153,7 @@ def create_promo(message):
 				cur.execute(f"INSERT INTO promocode (summa,code)"
 							f"VALUES ({summ},\'{codecode}\')")
 				con.commit()
-				bot.send_message(message.chat.id,f"Промокод успешно создан!\n\n`{codecode}`\n\nНажмите на промокод, чтобы его скопироваь",parse_mode='Markdown')
+				bot.send_message(message.chat.id,f"Промокод успешно создан!\n\n`{codecode}`\n\nНажмите на промокод, чтобы его скопировать",parse_mode='Markdown')
 				bot.register_next_step_handler(message, main_message)
 
 
