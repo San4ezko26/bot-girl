@@ -185,7 +185,10 @@ def main_message(message):
 				con = sqlite3.connect("data.db")
 				cur = con.cursor()
 				cur.execute(f"select status from ancety where id = {imgid}")
-				stat = cur.fetchone()[0]
+				try:
+					stat = cur.fetchone()[0]
+				except:
+					stat = 0
 				con.commit()
 
 				con = sqlite3.connect("data.db")
