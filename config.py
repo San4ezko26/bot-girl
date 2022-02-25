@@ -7,7 +7,7 @@ vxodadmin='/админ' #Слово для входа в админ панель
 vxodworker='/воркер' #Слово для входа в воркер панель (Доступно только для всех)
 zalety = -1001305864424
 bot_username = "BestEscortBot"
-qiwi_nick = "ESCORT26"
+qiwi_nick = "ESCORT261"
 chat_workers = "https://t.me/+iXSpPZmAap80OTQ1"
 text_workers = "https://telegra.ph/Manual-po-Luxury-Secret-12-19"
 
