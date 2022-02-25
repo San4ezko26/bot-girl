@@ -251,7 +251,7 @@ def main_message(message):
 		cur.execute(f"select balance from users where id = {message.chat.id}")
 		try:
 			bn=cur.fetchone()[0]
-		catch:
+		except:
 			bn=0
 		con.commit()
 		bot.send_message(message.chat.id,f"Ваш баланс {bn} RUB",reply_markup=bal())
