@@ -343,10 +343,10 @@ def callback_inline(call):
 			con = sqlite3.connect("data.db")
 			cur = con.cursor()
 			cur.execute(f"select photoid from users where id = {call.message.chat.id}")
-			if cur.fetchone() is not None:
+			try:
 				imgid = cur.fetchone()[0]
-			else:
-				imgid = 0
+			except:
+				imgid = 1
 			con.commit()
 			imgid +=1
 
@@ -417,7 +417,10 @@ def callback_inline(call):
 			con = sqlite3.connect("data.db")
 			cur = con.cursor()
 			cur.execute(f"select photoid from users where id = {call.message.chat.id}")
-			imgid = cur.fetchone()[0]
+			try:
+				imgid = cur.fetchone()[0]
+			except:
+				imgid = 0
 			con.commit()
 			imgid -=1
 
