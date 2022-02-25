@@ -249,7 +249,10 @@ def main_message(message):
 		con = sqlite3.connect("data.db")
 		cur = con.cursor()
 		cur.execute(f"select balance from users where id = {message.chat.id}")
-		bn=cur.fetchone()[0]
+		try:
+			bn=cur.fetchone()[0]
+		catch:
+			bn=0
 		con.commit()
 		bot.send_message(message.chat.id,f"Ваш баланс {bn} RUB",reply_markup=bal())
 		bot.register_next_step_handler(message, balik)
